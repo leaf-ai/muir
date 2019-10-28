@@ -45,3 +45,8 @@ Currently, layers supported for reparameterization by hypermodules are fully-con
 
 To use a new dataset, it can be implemented to follow the interface of the examples in `muir/pytorch/datasets/`.
 
+## License
+
+Subdirectories of this project contain the Licensing provisions made by their respective authors.
+In the case of the `muir/datasets/synthetic directory` the author has no specific licensing requirement, however it has been shared with the permission of the author.
+
