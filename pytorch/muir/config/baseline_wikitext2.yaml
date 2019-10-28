@@ -1,0 +1,19 @@
+tasks:
+    - dataset: wikitext2
+      batch_size: 20
+      model: lstm_language_model
+      output_size: None
+      layer_size: 256
+      loss: cross_entropy
+
+training:
+    optimizer: adam
+    lr: 0.001
+
+projectors:
+    context_size: 0
+
+optimization:
+    steps_per_generation: 1000
+    num_generations: 1000
+    final_training_generations: 0

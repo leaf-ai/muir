@@ -1,0 +1,18 @@
+tasks:
+    - dataset: cifar10
+      model: lenet
+      loss: cross_entropy
+      batch_size: 128
+      output_size: 10
+
+training:
+    optimizer: adam
+    lr: 0.001
+
+projectors:
+    context_size: 0
+
+optimization:
+    steps_per_generation: 1000
+    num_generations: 1000
+    final_training_generations: 0

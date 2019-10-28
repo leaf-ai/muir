@@ -1,0 +1,42 @@
+tasks:
+    - dataset: cifar10
+      model: lenet
+      loss: cross_entropy
+      batch_size: 128
+      output_size: 10
+    - dataset: crispr_genomic
+      model: deepbind
+      loss: mse
+      batch_size: 512
+      num_filters: 256
+      hidden_dim: 256
+      output_size: 1
+    - dataset: wikitext2
+      batch_size: 20
+      model: lstm_language_model
+      output_size: None
+      layer_size: 256
+      loss: cross_entropy
+
+training:
+    optimizer: adam
+    lr: 0.001
+
+projectors:
+    context_size: 4
+    block_in: 16
+    block_out: 16
+    bias: False
+
+optimization:
+    burn_in: 2
+    steps_per_generation: 1000
+    num_generations: 1000
+    generate_percentage: 0.5
+    alternatives_per_generation: 1
+    selection_method: best
+    soft_lr: 0.1
+    reactivation_probability: 0.0001
+    final_training_generations: 0
+    alpha: 0.5
+    save_best: False
